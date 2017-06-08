@@ -12,7 +12,7 @@ export default class Persona extends Component {
     return (
       <div className={s.container} style={style}>
         <div className={s.tooltip}>{nombre}
-          <div className={s.cargo}> {cargo}</div>
+          <div className={s.cargo}> <strong>{cargo}</strong> <br /> {partido}</div>
         </div>
       </div>
     )

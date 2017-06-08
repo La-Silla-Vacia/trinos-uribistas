@@ -4,14 +4,23 @@
   background-color: map(colors, neutral, lightest);
   transition: .2s;
   display: block;
+  padding-bottom: 1.5em;
 }
 
 .inner {
   clear: fix-legacy;
 }
 
-.title {
-  margin: 1em;
+p.title {
+  margin: 1em 2em;
+  clear: fix-legacy;
+  font-size: 1em !important;
+  font-style: italic;
+
+  @media only screen and (max-width: 992px) {
+    margin: 1em 5%;
+    width: 90%;
+  }
 }
 
 .loading {

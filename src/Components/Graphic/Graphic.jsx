@@ -1,7 +1,7 @@
 import {h, render, Component} from 'preact';
 import cn from 'classnames';
-const MarkdownIt = require('markdown-it'),
-  md = new MarkdownIt();
+import MarkdownIt from 'markdown-it';
+const md = new MarkdownIt();
 
 import s from './Graphic.css';
 import Persona from "../Persona";
@@ -87,25 +87,54 @@ export default class Graphic extends Component {
     const description = this.getDescription();
     return (
       <div className={s.container}>
-        <div className={s.inner}>
-          <div className={s.personas}>
-            <div className={s.inactivePersonas}>
-              {inactivePersonas}
-            </div>
-            <div className={s.activePersonas}>
-              {activePersonas}
-            </div>
+        <div className={s.personas}>
+          <div className={s.inactivePersonas}>
+            {inactivePersonas}
           </div>
-          {description}
+          <aside className={s.sidebar}>
+            <ul className={s.conventions}>
+              <li><span className={s.liberal}/>Liberal</li>
+              <li><span className={s.lau}/>Unidad Nacional</li>
+              <li><span className={s.alianza}/>Alianza Verde</li>
+              <li><span className={s.polo}/>Polo</li>
+              <li><span className={s.compromiso}/>Compromiso Ciudadano</li>
+              <li><span className={s.centro}/>Centro Democrático</li>
+              <li><span className={s.conservador}/>Conservador</li>
+              <li><span className={s.cambio}/>Cambio Radical</li>
+              <li><span className={s.progresistas}/>Progresistas</li>
+              <li><span className={s.undefined}/>Sin definir</li>
+            </ul>
+          </aside>
         </div>
+
         <div className={s.groupSelect}>
           <button
             className={cn(s.button, {[s.active]: activeGroupId === 0})}
             onClick={this.handleButtonClick.bind(this, 0)}
           >
-            Show all
+            Resetear vista
           </button>
           {groupOptions}
+        </div>
+
+        <div className={s.personas}>
+          <div className={s.inner}>
+            <div className={s.activePersonas}>
+              {(!activeGroupId) ? '' : activePersonas}
+            </div>
+            {description}
+          </div>
+          <aside className={s.sidebar}>
+            <div>
+              <button
+                className={cn(s.button, {[s.active]: activeGroupId === 0})}
+                onClick={this.handleButtonClick.bind(this, 0)}
+              >
+                Resetear vista
+              </button>
+              {groupOptions}
+            </div>
+          </aside>
         </div>
       </div>
     )
