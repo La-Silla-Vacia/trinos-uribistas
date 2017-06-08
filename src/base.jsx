@@ -13,15 +13,39 @@ export default class Base extends Component {
     super();
 
     this.state = {
-      data: [],
+      personas: [],
+      grupos: [],
       loading: true
     };
 
     this.setData = this.setData.bind(this);
   }
 
-  setData(data) {
-    this.setState({ data: data, loading: false });
+  setData(newData) {
+    const personas = [];
+    const grupos = [];
+
+    for (let item of newData.Personas) {
+      const newItem = {
+        nombre: item.nombre,
+        foto: item.foto,
+        partido: item.partido,
+        cargo: item.cargo,
+        grupo: item.grupo.split(',')
+      };
+      personas.push(newItem);
+    }
+
+    for (let item of newData.Grupos) {
+      const newItem = {
+        id: item.id,
+        grupo: item.grupo,
+        texto: item.texto
+      };
+      grupos.push(newItem);
+    }
+
+    this.setState({ personas: personas, grupos: grupos, loading: false });
   }
 
   componentWillMount() {
@@ -29,12 +53,12 @@ export default class Base extends Component {
   }
 
   render(props, state) {
-    const { loading, data } = state;
+    const { loading, personas } = state;
 
     let content = (loading) ? (<LoadScreen />) : (
       <div className={s.inner}>
         <h2 className={s.title}>Hello coaliciones_2018!</h2>
-        <Graphic data={data} />
+        <Graphic personas={personas} />
       </div>
     );
 

@@ -1,4 +1,4 @@
-import { h, render, Component } from 'preact';
+import {h, render, Component} from 'preact';
 import s from './Graphic.css';
 
 export default class Graphic extends Component {
@@ -6,10 +6,10 @@ export default class Graphic extends Component {
     alert(`Just clicked on ${name}!`);
   }
 
-  getCircles() {
-    const { data } = this.props;
-    return data.map((item, key) => {
-        const { name, value } = item;
+  getPersonas() {
+    const {personas} = this.props;
+    return personas.map((item, key) => {
+        const {nombre, value} = item;
         const size = value * 3;
         const style = {
           width: size,
@@ -17,18 +17,19 @@ export default class Graphic extends Component {
         };
 
         return (
-          <button className={s.circle} key={key} style={style} onClick={this.handleClick.bind(false, name)}>{name}</button>
+          <button className={s.circle} key={key} style={style}
+                  onClick={this.handleClick.bind(false, nombre)}>{nombre}</button>
         )
       }
     );
   }
 
   render(props, state) {
-    const circles = this.getCircles();
+    const personas = this.getPersonas();
 
     return (
       <div className={s.container}>
-        {circles}
+        {personas}
       </div>
     )
   }
