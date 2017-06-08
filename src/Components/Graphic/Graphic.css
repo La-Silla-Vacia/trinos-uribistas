@@ -8,17 +8,30 @@
   padding-bottom: 2em;
 }
 
-.circle {
-  border-radius: 50%;
-  background-color: map(colors, red, santander);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: .4s;
-  border: 0;
+.personas {
+  max-width: 45em;
+}
 
-  &:hover {
-    background-color: map(colors, red, lider);
-    color: #fff;
+.inactivePersonas,
+.activePersonas {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: block;
+  border: 1px solid #000;
+  border-radius: 0.3em;
+  background-color: transparent;
+  width: 100%;
+  margin-bottom: 0.5em;
+
+  &:focus {
+    outline: none;
+    border-color: map(colors, primary, base);
   }
+}
+
+.active {
+  background-color: red
 }

@@ -30,8 +30,9 @@ export default class Base extends Component {
         nombre: item.nombre,
         foto: item.foto,
         partido: item.partido,
+        color: item.color,
         cargo: item.cargo,
-        grupo: item.grupo.split(',')
+        grupo: item.grupo.split(',').map(Number)
       };
       personas.push(newItem);
     }
@@ -39,7 +40,7 @@ export default class Base extends Component {
     for (let item of newData.Grupos) {
       const newItem = {
         id: item.id,
-        grupo: item.grupo,
+        nombre: item.grupo,
         texto: item.texto
       };
       grupos.push(newItem);
@@ -53,12 +54,12 @@ export default class Base extends Component {
   }
 
   render(props, state) {
-    const { loading, personas } = state;
+    const { loading, personas, grupos } = state;
 
     let content = (loading) ? (<LoadScreen />) : (
       <div className={s.inner}>
         <h2 className={s.title}>Hello coaliciones_2018!</h2>
-        <Graphic personas={personas} />
+        <Graphic personas={personas} grupos={grupos} />
       </div>
     );
 
