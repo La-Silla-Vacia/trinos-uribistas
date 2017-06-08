@@ -8,8 +8,9 @@
   border: 3px solid;
   width: 3.5em;
   height: 3.5em;
-  background-size: 100%;
+  background-size: cover;
   margin: 0.5em;
+  float: left;
 
   &:hover {
     & .tooltip {

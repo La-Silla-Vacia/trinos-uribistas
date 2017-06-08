@@ -12,10 +12,21 @@
   max-width: 45em;
 }
 
-.inactivePersonas,
+.inactivePersonas {
+  min-height: 12em;
+}
+
 .activePersonas {
   display: flex;
   flex-wrap: wrap;
+  min-height: 12em;
+}
+
+.activePersonas {
+  background-color: map(colors, secondary, light);
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
 }
 
 .button {
