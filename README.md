@@ -3,12 +3,9 @@ Source files for coaliciones_2018
 
 ## Preview
 
-[You can find a preview of 'coaliciones_2018' here](https://la-silla-vacia.github.com/coaliciones_2018)
+[You can find a preview of 'coaliciones_2018' here](https://la-silla-vacia.github.io/coaliciones_2018)
 
 ![](https://raw.githubusercontent.com/la-silla-vacia/coaliciones_2018/master/screenshot.png)
-
-## Data
-Please link to any external data used, as well as scripts for cleaning and analyzing that data, all of which should live in the `/data` directory.
 
 ## Installation
 First, make sure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/en/) installed on your operating system.
