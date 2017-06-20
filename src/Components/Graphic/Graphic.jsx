@@ -1,7 +1,7 @@
 import {h, render, Component} from 'preact';
 import cn from 'classnames';
 import MarkdownIt from 'markdown-it';
-const md = new MarkdownIt();
+const md = new MarkdownIt({html: true});
 
 import s from './Graphic.css';
 import Persona from "../Persona";
@@ -46,8 +46,16 @@ export default class Graphic extends Component {
     grupos.map((group) => {
       if (group.id === id) activeGroup = group;
     });
-    console.log(activeGroup);
+
     this.setState({activeGroupId: id, activeGroup});
+    if (twttr) {
+      console.log("rendering twitter");
+      setTimeout(() => {
+        twttr.widgets.load()
+      }, 50);
+    } else {
+      console.log("No twitter script active");
+    }
   }
 
   getGroupOptions() {
