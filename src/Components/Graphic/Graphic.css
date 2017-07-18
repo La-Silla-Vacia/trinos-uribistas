@@ -6,23 +6,25 @@
 }
 
 .personas {
-
 }
 
 .inactivePersonas {
   float: left;
   width: 78.5%;
   padding: 0 2em;
-  display: flex;
-  justify-content: space-around;
   @media only screen and (min-width: 992px) {
     min-height: 6em;
+    display: flex;
+    justify-content: space-around;
   }
 
   @media only screen and (max-width: 992px) {
     width: 90%;
     margin: 0 5%;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
