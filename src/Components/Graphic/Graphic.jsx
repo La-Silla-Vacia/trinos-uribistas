@@ -101,15 +101,8 @@ export default class Graphic extends Component {
           </div>
           <aside className={s.sidebar}>
             <ul className={s.conventions}>
-              <li><span className={s.liberal}/>Liberal</li>
-              <li><span className={s.lau}/>Unidad Nacional</li>
-              <li><span className={s.alianza}/>Alianza Verde</li>
-              <li><span className={s.polo}/>Polo</li>
-              <li><span className={s.compromiso}/>Compromiso Ciudadano</li>
               <li><span className={s.centro}/>Centro Democrático</li>
               <li><span className={s.conservador}/>Conservador</li>
-              <li><span className={s.cambio}/>Cambio Radical</li>
-              <li><span className={s.progresistas}/>Progresistas</li>
               <li><span className={s.undefined}/>Sin definir</li>
             </ul>
           </aside>
