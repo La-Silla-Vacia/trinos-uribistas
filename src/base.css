@@ -20,6 +20,7 @@ p.title {
   @media only screen and (max-width: 992px) {
     margin: 1em 5%;
     width: 90%;
+    font-size: .8em !important;
   }
 }
 
