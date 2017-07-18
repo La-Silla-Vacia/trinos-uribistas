@@ -33,7 +33,7 @@ To embed on a webpage use this code:
 <!-- START OF OUR INTERACTIVE -->
 <script type="text/javascript">
 window.coaliciones_2018_data = {
-  "dataUri": "https://lsv-data-visualizations.firebaseio.com/coaliciones_2018.json"
+  "dataUri": "https://lsv-data-visualizations.firebaseio.com/trinos_uribistas.json"
 }
 </script>
 <div class="lsv-interactive" id="coaliciones_2018">
