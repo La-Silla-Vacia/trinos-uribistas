@@ -58,7 +58,7 @@ export default class Base extends Component {
 
     let content = (loading) ? (<LoadScreen />) : (
       <div className={s.inner}>
-        <p className={s.title}><strong>Instrucciones: </strong>Haga clic en los botones azules de la derecha para saber a que grupo pertenece cada uno de los personajes</p>
+        <p className={s.title}><strong>Instrucciones: </strong>Haga clic en los botones azules de la derecha para saber a qué grupo pertenece cada uno de los personajes. Estan organizados de más extremo a la izquierda a más moderado a la derecha.</p>
         <Graphic personas={personas} grupos={grupos} />
       </div>
     );
