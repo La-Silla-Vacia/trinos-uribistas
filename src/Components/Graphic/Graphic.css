@@ -13,7 +13,7 @@
   width: 78.5%;
   padding: 0 2em;
   @media only screen and (min-width: 992px) {
-    min-height: 6em;
+    min-height: 5em;
     display: flex;
     justify-content: space-around;
   }
@@ -31,13 +31,15 @@
 .activePersonas {
   display: flex;
   flex-wrap: wrap;
-  min-height: 8em;
+  min-height: 7em;
   float: left;
-  background-color: map(colors, secondary, light);
+  background-color: map(colors, neutral, lightest);
   align-items: center;
   justify-content: center;
-  padding: 2em;
-  width: 95%;
+  padding: 1.4em;
+  width: 100%;
+  border-radius: .3em;
+  border: 1px dashed map(colors, neutral, lighter);
 
   @media only screen and (max-width: 992px) {
     width: 100%;
@@ -53,7 +55,7 @@
   border-radius: 0.3em;
   background-color: transparent;
   width: 90%;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.3em;
   color: map(colors, primary, base);
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -65,14 +67,14 @@
 }
 
 .inner {
-  width: 80%;
+  width: 79%;
   float: left;
   padding: 0 2em;
 
   @media only screen and (max-width: 992px) {
     width: 90%;
     margin: 0 5%;
-    padding: 2em 0 0;
+    padding: 1em 0 0;
   }
 }
 
@@ -83,7 +85,7 @@
 
 .conventions {
   margin: 0;
-  padding: 0;
+  padding: .5em 1.5em;
   list-style: none;
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
@@ -100,7 +102,7 @@
 }
 
 .description {
-  width: 95%;
+  width: 100%;
   overflow: hidden;
 
   @media only screen and (max-width: 992px) {
@@ -108,7 +110,11 @@
   }
 
   & h2 {
-    text-align: left;
+    text-align: center;
+    color: #44a5db;
+    font-size: 1em;
+    font-family: 'Roboto Condensed';
+    text-transform: uppercase;
   }
 
   & p {
@@ -140,7 +146,7 @@
     display: block;
     width: 90%;
     margin: 0 auto;
-    padding-top: 2em;
+    padding-top: 1em;
     overflow: hidden;
 
     & button {
